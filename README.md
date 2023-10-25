@@ -83,7 +83,7 @@ A tutorial on how this project was built is available in [Michael_Ezzy's Space](
 ### Built With:
 
 ![Python][python]
-![FastAPI][flask]
+![FastAPI][fastapi]
 ![SQLite][sqlite]
 
 <p align="right"><a href="#readme-top">back to top</a></p>
@@ -123,7 +123,7 @@ Python3: [Get Python](https://www.python.org/downloads/)
    ```
 2. Activate the virtual environment
    ```sh
-   source env/Scripts/activate
+   source virtual/Scripts/activate
    ```
 3. Install project packages
    ```sh
@@ -166,9 +166,11 @@ Distributed under the MIT License. See <a href="https://github.com/mike-eziefule
 <!-- Contact -->
 ## Contact
 
-Engr Michael Eziefule - [@EziefuleMichael](https://twitter.com/EziefuleMichael) - mike.eziefule@gmail.com
+X [Formally Twitter] - [@EziefuleMichael](https://twitter.com/EziefuleMichael)
 
 Project Link: [Ezzy_Blog_api](https://github.com/mike-eziefule/Ezzy_Blog_api)
+
+Email Address: [mike.eziefule@gmail.com](mailto:mike-eziefule@gmail.com)
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
