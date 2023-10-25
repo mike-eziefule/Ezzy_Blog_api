@@ -16,7 +16,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/mike-eziefule/Ezzy_Blog">
-    <img src="./images/EZZY-BLOG (1).png" alt="Logo" width="90%" height="30%">
+    <img src="./images/EZZY-BLOG (1).png" alt="Logo" width="80%" height="20%">
   </a>
 </div>
 
@@ -146,7 +146,7 @@ Python3: [Get Python](https://www.python.org/downloads/)
 
 <br />
 
-[![Ze Blog Screenshot][ze-blog-screenshot]](https://github.com/Ze-Austin/ze-blog/blob/main/static/screenshot.png)
+[![Ezzy blog screenshot][Ezzy-blog-screenshot]](https://github.com/mike-eziefule/Ezzy_Blog_api/blob/main/images/EZZY-BLOG.png)
 
 <br/>
 
@@ -205,6 +205,7 @@ This project was made possible by:
 [license-url]: https://github.com/mike-eziefule/Ezzy_Blog_api/blob/main/LICENSE
 [twitter-shield]: https://img.shields.io/twitter/follow/EziefuleMichael
 [twitter-url]: https://twitter.com/EziefuleMichael
-[Ezzy-blog-screenshot]:https://github.com/mike-eziefule/Ezzy_Blog_api/blob/main/images/EZZY-BLOG.png
+[Ezzy-blog-screenshot]:images/EZZY-BLOG.png
 [python]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
+[fastapi]: https://img.shields.io/badge/fastapi-009688?style=for-the-badge&logo=fastapi&logoColor=ffdd54
 [sqlite]: https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white
