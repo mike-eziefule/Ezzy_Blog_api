@@ -186,8 +186,6 @@ This project was made possible by:
 * [Ze-Austin AltSchool Python Repo](https://github.com/Ze-Austin/altschool-python)
 * [GitHub Student Pack](https://education.github.com/globalcampus/student)
 * [Canva](https://www.canva.com/)
-* [Othneil Drew's README Template](https://github.com/othneildrew/Best-README-Template)
-* [Ileriayo's Markdown Badges](https://github.com/Ileriayo/markdown-badges)
 * [Stack Overflow](https://stackoverflow.com/)
 
 <p align="right"><a href="#readme-top">back to top</a></p>
@@ -201,12 +199,12 @@ This project was made possible by:
 [forks-url]: https://github.com/mike-eziefule/Ezzy_Blog_api/network/members
 [stars-shield]: https://img.shields.io/github/stars/mike-eziefule/Ezzy_Blog_api
 [stars-url]: https://github.com/mike-eziefule/Ezzy_Blog_api/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Ze-Austin/ze-blog.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/mike-eziefule/Ezzy_Blog_api
 [issues-url]: https://github.com/mike-eziefule/Ezzy_Blog_api/issues
 [license-shield]: https://img.shields.io/github/license/mike-eziefule/Ezzy_Blog_api
 [license-url]: https://github.com/mike-eziefule/Ezzy_Blog_api/blob/main/LICENSE
 [twitter-shield]: https://img.shields.io/twitter/follow/EziefuleMichael
 [twitter-url]: https://twitter.com/EziefuleMichael
-[Ezzy-blog-screenshot]: images\EZZY-BLOG.png
+[Ezzy-blog-screenshot]:https://github.com/mike-eziefule/Ezzy_Blog_api/blob/main/images/EZZY-BLOG.png
 [python]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
 [sqlite]: https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white
