@@ -195,22 +195,18 @@ This project was made possible by:
 ---
 
 <!-- Markdown Links & Images -->
-[contributors-shield]: https://img.shields.io/github/contributors/Ze-Austin/ze-blog.svg?style=for-the-badge
-[contributors-url]: https://github.com/Ze-Austin/ze-blog/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Ze-Austin/ze-blog.svg?style=for-the-badge
-[forks-url]: https://github.com/Ze-Austin/ze-blog/network/members
-[stars-shield]: https://img.shields.io/github/stars/Ze-Austin/ze-blog.svg?style=for-the-badge
-[stars-url]: https://github.com/Ze-Austin/ze-blog/stargazers
+[contributors-shield]: https://img.shields.io/github/contributors/mike-eziefule/Ezzy_Blog_api
+[contributors-url]: https://github.com/mike-eziefule/Ezzy_Blog_api/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/mike-eziefule/Ezzy_Blog_api
+[forks-url]: https://github.com/mike-eziefule/Ezzy_Blog_api/network/members
+[stars-shield]: https://img.shields.io/github/stars/mike-eziefule/Ezzy_Blog_api
+[stars-url]: https://github.com/mike-eziefule/Ezzy_Blog_api/stargazers
 [issues-shield]: https://img.shields.io/github/issues/Ze-Austin/ze-blog.svg?style=for-the-badge
-[issues-url]: https://github.com/Ze-Austin/ze-blogissues
-[license-shield]: https://img.shields.io/github/license/Ze-Austin/ze-blog.svg?style=for-the-badge
-[license-url]: https://github.com/Ze-Austin/ze-blog/blob/main/LICENSE.txt
-[twitter-shield]: https://img.shields.io/badge/-@ze_austin-1ca0f1?style=for-the-badge&logo=twitter&logoColor=white&link=https://twitter.com/ze_austin
-[twitter-url]: https://twitter.com/ze_austin
-[ze-blog-screenshot]: static/screenshot.png
+[issues-url]: https://github.com/mike-eziefule/Ezzy_Blog_api/issues
+[license-shield]: https://img.shields.io/github/license/mike-eziefule/Ezzy_Blog_api
+[license-url]: https://github.com/mike-eziefule/Ezzy_Blog_api/blob/main/LICENSE
+[twitter-shield]: https://img.shields.io/twitter/follow/EziefuleMichael
+[twitter-url]: https://twitter.com/EziefuleMichael
+[Ezzy-blog-screenshot]: images\EZZY-BLOG.png
 [python]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
-[flask]: https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white
-[jinja]: https://img.shields.io/badge/jinja-white.svg?style=for-the-badge&logo=jinja&logoColor=black
-[html5]: https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white
-[css3]: https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white
 [sqlite]: https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white
