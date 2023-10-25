@@ -24,7 +24,7 @@
 
 <div>
   <p align="center">
-    <a href="https://github.com/mike-eziefule/Ezzy_Blog#readme"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/mike-eziefule/Ezzy_Blog_api/blob/main/README.md"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/Ze-Austin/ze-blog/blob/main/static/screenshot.png">View Demo</a>
@@ -74,19 +74,16 @@ Ezzy Blog is a safe space for you to explore the thoughts and experiences of fel
 
 Authentication is not required to read articles on this blog, but you'll have log in to post, edit or delete your articles.
 
-Ze Blog was built as an exam project by <a href="https://www.github.com/Ze-Austin">Ze Austin</a>, a Backend Engineering student at <a href="https://altschoolafrica.com/schools/engineering">AltSchool Africa</a> who's learning to create magic with the Python Flask framework.
+Ezzy Blog was built as an exam project by <a href="https://github.com/mike-eziefule/">Eziefule Michael</a>, a Backend Engineering student at <a href="https://altschoolafrica.com/schools/engineering">AltSchool Africa</a> who's learning to create magic with the Python FastAPI framework.
 
-A tutorial on how this project was built is available in [Austin's Space](https://ze-austin.hashnode.dev/flask-blog-project) on Hashnode.
+A tutorial on how this project was built is available in [Michael_Ezzy's Space](https://ze-austin.hashnode.dev/flask-blog-project) on Hashnode.
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
 ### Built With:
 
 ![Python][python]
-![Flask][flask]
-![Jinja][jinja]
-![HTML5][html5]
-![CSS3][css3]
+![FastAPI][flask]
 ![SQLite][sqlite]
 
 <p align="right"><a href="#readme-top">back to top</a></p>
@@ -96,14 +93,13 @@ A tutorial on how this project was built is available in [Austin's Space](https:
 ## Lessons Learned
 
 Creating this blog helped me learn and practice:
-* Responsive Web Design
+* The use of python for backend development
 * Debugging
 * Routing
 * Database Management
 * Internet Security
 * User Authentication
 * User Authorization
-* Message Flashing
 * Documentation
 
 <p align="right"><a href="#readme-top">back to top</a></p>
@@ -123,22 +119,24 @@ Python3: [Get Python](https://www.python.org/downloads/)
 
 1. Clone this repo
    ```sh
-   git clone https://github.com/Ze-Austin/ze-blog.git
+   git clone https://github.com/mike-eziefule/Ezzy_Blog_api.git
    ```
 2. Activate the virtual environment
    ```sh
-   source env/bin/activate
+   source env/Scripts/activate
    ```
 3. Install project packages
    ```sh
    pip install -r requirements.txt
    ```
-4. Run Flask
+4. Run uvicorn
    ```sh
-   flask run
+   uvicorn main:app --reload
    ```
 5. Open the link generated in the terminal on a browser  
-
+   ```sh
+   http://127.0.0.1:8000/docs
+   ```
 <p align="right"><a href="#readme-top">back to top</a></p>
 
 ---
@@ -159,7 +157,7 @@ Python3: [Get Python](https://www.python.org/downloads/)
 <!-- License -->
 ## License
 
-Distributed under the MIT License. See <a href="https://github.com/Ze-Austin/ze-blog/blob/main/LICENSE">LICENSE</a> for more information.
+Distributed under the MIT License. See <a href="https://github.com/mike-eziefule/Ezzy_Blog_api/blob/main/LICENSE">LICENSE</a> for more information.
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
@@ -168,9 +166,9 @@ Distributed under the MIT License. See <a href="https://github.com/Ze-Austin/ze-
 <!-- Contact -->
 ## Contact
 
-Dr Austin Wopara - [@Ze_Austin](https://twitter.com/Ze_Austin) - austinwopara@gmail.com
+Engr Michael Eziefule - [@EziefuleMichael](https://twitter.com/EziefuleMichael) - mike.eziefule@gmail.com
 
-Project Link: [Ze Blog](https://github.com/Ze-Austin/ze-blog)
+Project Link: [Ezzy_Blog_api](https://github.com/mike-eziefule/Ezzy_Blog_api)
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
@@ -182,10 +180,10 @@ Project Link: [Ze Blog](https://github.com/Ze-Austin/ze-blog)
 This project was made possible by:
 
 * [AltSchool Africa School of Engineering](https://altschoolafrica.com/schools/engineering)
-* [Caleb Emelike's Flask Lessons](https://github.com/CalebEmelike)
-* [My AltSchool Python Repo](https://github.com/Ze-Austin/altschool-python)
+* [Caleb Emelike's FastAAPI Lessons](https://github.com/CalebEmelike)
+* [Ze-Austin AltSchool Python Repo](https://github.com/Ze-Austin/altschool-python)
 * [GitHub Student Pack](https://education.github.com/globalcampus/student)
-* [NameCheap Logo Maker](https://www.namecheap.com/logo-maker/)
+* [Canva](https://www.canva.com/)
 * [Othneil Drew's README Template](https://github.com/othneildrew/Best-README-Template)
 * [Ileriayo's Markdown Badges](https://github.com/Ileriayo/markdown-badges)
 * [Stack Overflow](https://stackoverflow.com/)
