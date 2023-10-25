@@ -76,7 +76,7 @@ Authentication is not required to read articles on this blog, but you'll have lo
 
 Ezzy Blog was built as an exam project by <a href="https://github.com/mike-eziefule/">Eziefule Michael</a>, a Backend Engineering student at <a href="https://altschoolafrica.com/schools/engineering">AltSchool Africa</a> who's learning to create magic with the Python FastAPI framework.
 
-A tutorial on how this project was built is available in [Michael_Ezzy's Space](https://ze-austin.hashnode.dev/flask-blog-project) on Hashnode.
+A tutorial on how this project was built is available in [Michael_Ezzy's Space](https://hashnode.com/draft/6539339dbe20a1000f0b5edd) on Hashnode.
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
@@ -146,7 +146,7 @@ Python3: [Get Python](https://www.python.org/downloads/)
 
 <br />
 
-[![Ezzy blog screenshot][Ezzy-blog-screenshot]](https://github.com/mike-eziefule/Ezzy_Blog_api/blob/main/images/EZZY-BLOG.png)
+[![Ezzy blog screenshot][Ezzy-blog-screenshot]](/images/Screenshot.png)
 
 <br/>
 
@@ -207,5 +207,5 @@ This project was made possible by:
 [twitter-url]: https://twitter.com/EziefuleMichael
 [Ezzy-blog-screenshot]:images/EZZY-BLOG.png
 [python]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
-[fastapi]: https://img.shields.io/badge/fastapi-009688?style=for-the-badge&logo=fastapi&logoColor=ffdd54
+[fastapi]: https://img.shields.io/badge/fastapi-009688?style=for-the-badge&logo=fastapi&logoColor=black
 [sqlite]: https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white
