@@ -146,7 +146,7 @@ Python3: [Get Python](https://www.python.org/downloads/)
 
 <br />
 
-[![Ezzy blog screenshot][Ezzy-blog-screenshot]](/images/Screenshot.png)
+[![Ezzy blog screenshot][Ezzy-blog-screenshot]](https://github.com/mike-eziefule/Ezzy_Blog_api/blob/main/images/Screenshot.png)
 
 <br/>
 
