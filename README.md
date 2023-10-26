@@ -27,7 +27,7 @@
     <a href="https://github.com/mike-eziefule/Ezzy_Blog_api/blob/main/README.md"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Ze-Austin/ze-blog/blob/main/static/screenshot.png">View Demo</a>
+    <a href="https://www.loom.com/share/ed3cc4bfb8c743cd9371e2831a7785ec?sid=4be6af19-e752-4289-a180-bf065c0bd58a">View Demo</a>
     ·
     <a href="https://github.com/mike-eziefule/Ezzy_Blog/issues">Report Bug</a>
     ·
