@@ -9,11 +9,11 @@ class User(Base):
     id = Column(Integer, primary_key=True, index = True)
     firstname = Column(String, nullable= False, index= True)
     lastname = Column(String, nullable= False, index= True)
-    username = Column(String, nullable= False, unique=True, index= True)
+    nickname = Column(String, nullable= False, index= True)
     email = Column(String, nullable= False, unique=True, index= True)
     password = Column(String, nullable= False, index= True)
-    status = Column(Boolean, default= True)
-    articles = relationship("Blogs", back_populates = "author")
+    status = Column(String, default= "ACTIVE")
+    articles = relationship("Blogs", back_populates = "owner")
 
 
 class Blogs(Base):
@@ -22,6 +22,8 @@ class Blogs(Base):
     id = Column(Integer, primary_key=True, index = True)
     title = Column(String, nullable= False, unique=True, index= True)
     content = Column(String, nullable= False)
+    author = Column(String, nullable= False)
     date_posted = Column(Date)
-    author_id = Column(Integer, ForeignKey("users.id"))
-    author = relationship("User", back_populates = "articles")
+    owner_id = Column(Integer, ForeignKey("users.id"))
+    
+    owner = relationship("User", back_populates = "articles")

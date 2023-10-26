@@ -23,16 +23,16 @@ def get_all_users(db:Session=Depends(reusables_codes.get_db)):
 #     return user
 
 # #admin delete a user by their id address
-# @admin_route.delete('/users/delete/{id:int}')
-# def delete_user(id:int, db:Session = Depends(reusables_codes.get_db)):
-#     existing_user = db.query(User).filter(User.id==id)
-#     if not existing_user.first():
-#         return {"message": "User no found"}
-#     existing_user.delete()
-#     db.commit()
-#     return {
-#         'message':'User delete successfully',
-#     }
+@admin_route.delete('/users/delete/{id:int}')
+def delete_user(id:int, db:Session = Depends(reusables_codes.get_db)):
+    existing_user = db.query(User).filter(User.id==id)
+    if not existing_user.first():
+        return {"message": "User no found"}
+    existing_user.delete()
+    db.commit()
+    return {
+        'message':'User delete successfully',
+    }
 
 
 #admin delete all user

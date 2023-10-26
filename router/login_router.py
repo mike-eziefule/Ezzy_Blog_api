@@ -1,6 +1,7 @@
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from fastapi import APIRouter, Depends, HTTPException, status
-from service.dependencies import injection
+# from service.dependencies import injection
+from service.Blog_services import reusables_codes
 from sqlalchemy.orm import Session
 from schema.models import User
 from jose import jwt
@@ -14,7 +15,7 @@ ALGORITHM = "HS256"
 login_route = APIRouter()
 
 @login_route.post("/token")
-def retrieve_token_after_authentication(form_data: OAuth2PasswordRequestForm = Depends(), db:Session=Depends(injection.get_db)):
+def retrieve_token_after_authentication(form_data: OAuth2PasswordRequestForm = Depends(), db:Session=Depends(reusables_codes.get_db)):
 
     auth_user = db.query(User).all()
     
@@ -24,6 +25,9 @@ def retrieve_token_after_authentication(form_data: OAuth2PasswordRequestForm = D
             jwt_token = jwt.encode(data, SECRET_KEY, algorithm=ALGORITHM)
             return {"access_token": jwt_token, "token_type": "bearer"}
         
-    raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="invalid credentials")
+    raise HTTPException(
+        status_code=status.HTTP_401_UNAUTHORIZED, 
+        detail="invalid credentials"
+        )
     
     
