@@ -33,8 +33,7 @@
     ·
     <a href="https://github.com/mike-eziefule/Ezzy_Blog/issues">Request Feature</a>
   </p>
-</div>
-
+</div
 ---
 
 <!-- Table of Contents -->
