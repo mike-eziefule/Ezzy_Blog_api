@@ -145,7 +145,8 @@ Python3: [Get Python](https://www.python.org/downloads/)
 
 <br />
 
-[![Ezzy blog screenshot][Ezzy-blog-screenshot]](https://github.com/mike-eziefule/Ezzy_Blog_api/blob/main/images/Screenshot.png)
+[![Ezzy blog screenshot pg1][Ezzy-blog-screenshot-pg1]](https://github.com/mike-eziefule/Ezzy_Blog_api/blob/main/images/ezzy_blogpage1.png)
+[![Ezzy blog screenshot pg2][Ezzy-blog-screenshot-pg2]](https://github.com/mike-eziefule/Ezzy_Blog_api/blob/main/images/ezzy_blogpage2.png)
 
 <br/>
 
@@ -204,7 +205,8 @@ This project was made possible by:
 [license-url]: https://github.com/mike-eziefule/Ezzy_Blog_api/blob/main/LICENSE
 [twitter-shield]: https://img.shields.io/twitter/follow/EziefuleMichael
 [twitter-url]: https://twitter.com/EziefuleMichael
-[Ezzy-blog-screenshot]:images/Screenshot.png
+[Ezzy-blog-screenshot-pg1]:images/ezzy_blogpage1.png
+[Ezzy-blog-screenshot-pg2]:images/ezzy_blogpage2.png
 [python]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
 [fastapi]: https://img.shields.io/badge/fastapi-009688?style=for-the-badge&logo=fastapi&logoColor=black
 [sqlite]: https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white
