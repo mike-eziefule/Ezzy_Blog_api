@@ -3,10 +3,7 @@ from fastapi import HTTPException, status
 from schema.models import User
 from database.database import sessionLocal
 from typing import Generator
-
-SECRET_KEY = "mysupersecretkey"
-ALGORITHM = "HS256"
-
+from core.config import setting
 
 
 class reusables_codes:
@@ -16,7 +13,7 @@ class reusables_codes:
     
     def get_user_from_token(db, token):
         try:
-            payload = jwt.decode(token, SECRET_KEY, algorithms =[ALGORITHM])
+            payload = jwt.decode(token, setting.SECRET_KEY, algorithms =[setting.ALGORITHM])
             username:str = payload.get("sub") #"sub" is a field holding the username/email address
             if username is None:
                 raise HTTPException(

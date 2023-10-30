@@ -52,7 +52,7 @@ async def Edit_User_Info(id:int, input:EditUser, db:Session = Depends(reusables_
     if existing_user.first().id == user.id:
         # db update reqires a dict input but input:BlogCreate is a pydantic model hence the use of jsonable encoder to convert it
         # existing_article = existing_article.update(jsonable_encoder(input))  
-        existing_user.update(input.__dict__ )                    #Alternatively
+        existing_user.update(input.__dict__)                    #Alternatively
         db.commit()
         raise HTTPException(
             status_code=status.HTTP_202_ACCEPTED, 
@@ -92,13 +92,3 @@ async def Delete_My_account(id:int, db:Session=Depends(reusables_codes.get_db), 
             status_code=status.HTTP_403_FORBIDDEN, 
             detail= 'Owners permission required'
         )
-
-
-#SIGNING USER TEST
-# @user_route.post('/sign-in')
-# def login_user(user: UserLogin, db:Session=Depends(reusables_codes.get_db)):
-#     auth_user = db.query(User).all()
-#     for row in auth_user:
-#         if row.email == user.email and row.password == user.password:
-#             return {"message": "Login successful"}
-#     return {"message": "credentials are incorrect"}

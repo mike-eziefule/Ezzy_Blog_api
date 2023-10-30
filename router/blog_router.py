@@ -7,8 +7,6 @@ from datetime import datetime
 from typing import List
 from router.login_router import oauth2_scheme
 
-SECRET_KEY = "mysupersecretkey"
-ALGORITHM = "HS256"
 
 blog_route = APIRouter()
 
@@ -23,12 +21,11 @@ async def list_blog_from_author(user_id, db:Session = Depends(reusables_codes.ge
     
     return articles
 
-#CREATE A NEW ARTICLES BY AUTHOR ID
-
+#CREATE A NEW ARTICLE
 @blog_route.post("/create", response_model= ShowBlog)
 async def create_article(article:BlogCreate, db:Session = Depends(reusables_codes.get_db), token:str=Depends(oauth2_scheme)):
     
-    user = reusables_codes.get_user_from_token(db, token)
+    user = reusables_codes.get_user_from_token(db, token)           #authorization
     
     new_article = Blogs(**article.dict(), date_posted = datetime.now().date(), owner_id = user.id, author = user.firstname+' '+user.lastname)
     db.add(new_article)
@@ -43,7 +40,7 @@ async def create_article(article:BlogCreate, db:Session = Depends(reusables_code
 @blog_route.put("/update/{id}")
 async def Edit_article(id:int, input:BlogCreate, db:Session = Depends(reusables_codes.get_db), token:str=Depends(oauth2_scheme)):
     
-    user = reusables_codes.get_user_from_token(db, token)
+    user = reusables_codes.get_user_from_token(db, token)           #authorization
     
     existing_article = db.query(Blogs).filter(Blogs.id==id)
     if not existing_article.first():
@@ -55,7 +52,7 @@ async def Edit_article(id:int, input:BlogCreate, db:Session = Depends(reusables_
     if existing_article.first().owner_id == user.id:
         # db update reqires a dict input but input:BlogCreate is a pydantic model hence the use of jsonable encoder to convert it
         # existing_article = existing_article.update(jsonable_encoder(input))  
-        existing_article.update(input.__dict__ )                    #Alternatively
+        existing_article.update(input.__dict__ )  #Alternatively
         db.commit()
         raise HTTPException(
             status_code=status.HTTP_202_ACCEPTED, 
@@ -72,7 +69,7 @@ async def Edit_article(id:int, input:BlogCreate, db:Session = Depends(reusables_
 @blog_route.delete("/delete/{id}")
 async def delete_article(id:int, db:Session = Depends(reusables_codes.get_db), token:str=Depends(oauth2_scheme)):
     
-    user = reusables_codes.get_user_from_token(db, token)
+    user = reusables_codes.get_user_from_token(db, token)      #authorization
     
     existing_article = db.query(Blogs).filter(Blogs.id==id)
     if not existing_article.first():

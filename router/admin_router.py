@@ -10,7 +10,7 @@ admin_route = APIRouter()
 ##USERS
 #admin view aLL users
 @admin_route.get('/users/all_users')
-def get_all_users(db:Session=Depends(reusables_codes.get_db)):
+async def get_all_users(db:Session=Depends(reusables_codes.get_db)):
     all_users = db.query(User).all()
     return all_users
 
@@ -24,7 +24,7 @@ def get_all_users(db:Session=Depends(reusables_codes.get_db)):
 
 # #admin delete a user by their id address
 @admin_route.delete('/users/delete/{id:int}')
-def delete_user(id:int, db:Session = Depends(reusables_codes.get_db)):
+async def delete_user(id:int, db:Session = Depends(reusables_codes.get_db)):
     existing_user = db.query(User).filter(User.id==id)
     if not existing_user.first():
         return {"message": "User no found"}
@@ -37,7 +37,7 @@ def delete_user(id:int, db:Session = Depends(reusables_codes.get_db)):
 
 #admin delete all user
 @admin_route.delete('/users/delete/all')
-def delete_all_users(db:Session=Depends(reusables_codes.get_db)):
+async def delete_all_users(db:Session=Depends(reusables_codes.get_db)):
     user = db.query(User).all()
     if user == []:
         return {"message": "User Database is empty"}
@@ -52,7 +52,7 @@ def delete_all_users(db:Session=Depends(reusables_codes.get_db)):
 #ARTICLES
 #admin view aLL articles
 @admin_route.get('/articles/view_all')
-def get_all_articles(db:Session=Depends(reusables_codes.get_db)):
+async def get_all_articles(db:Session=Depends(reusables_codes.get_db)):
     all_blogs = db.query(Blogs).all()
     return all_blogs
 
@@ -70,7 +70,7 @@ def get_all_articles(db:Session=Depends(reusables_codes.get_db)):
 
 #admin view aLL articles
 @admin_route.delete('/articles/delete_all')
-def delete_all_articles(db:Session=Depends(reusables_codes.get_db)):
+async def delete_all_articles(db:Session=Depends(reusables_codes.get_db)):
     all_blogs = db.query(Blogs).all()
     for blog in all_blogs:
         db.delete(blog)
