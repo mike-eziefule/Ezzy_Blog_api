@@ -5,7 +5,7 @@ from schema.article_schema import ShowBlog, BlogCreate, Blog
 from schema.models import Blogs
 from datetime import datetime
 from router.login_router import oauth2_scheme
-
+from typing import List
 
 blog_route = APIRouter()
 
@@ -26,7 +26,7 @@ async def create_article(title: str, article:BlogCreate, db:Session = Depends(re
     
     
 #FILTER ARTICLES BY AUTHOR ID
-@blog_route.get("/view_blogs", response_model= list[ShowBlog])
+@blog_route.get("/view_blogs", response_model= List[ShowBlog])
 async def view_my_blog_posts(db:Session = Depends(reusables_codes.get_db), token:str=Depends(oauth2_scheme)):
     
     user = reusables_codes.get_user_from_token(db, token)           #authorization
