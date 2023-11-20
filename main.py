@@ -1,4 +1,5 @@
 from fastapi import FastAPI, Depends
+from fastapi.middleware.cors import CORSMiddleware
 from service.Blog_services import reusables_codes
 from sqlalchemy.orm import Session
 from schema.models import Base, Blogs
@@ -14,6 +15,7 @@ from core.config import setting
 #read metadata, and instructing it to create tables using base schema.
 Base.metadata.create_all(bind=engine)
 
+
 #FastAPI Matadata.
 app = FastAPI(  
     title = setting.TITLE, 
@@ -21,6 +23,16 @@ app = FastAPI(
     contact= setting.CONTACT,
     version= setting.VERSION,
     openapi_tags= setting.TAGS
+)
+
+origins = ["*"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins = origins,
+    allow_credentials = True,
+    allow_methods = ["*"],
+    allow_headers = ["*"]
 )
 
 app.include_router(user_route, prefix='/user', tags=['Users'])
