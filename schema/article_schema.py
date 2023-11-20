@@ -6,8 +6,8 @@ class Blog(BaseModel):
     title: str
     content: str  = 'Create Magic here'
 
-class BlogCreate(Blog):
-    pass
+class BlogCreate(BaseModel):
+    content: str  = 'Create Magic here'
 class ShowBlog(Blog):
     author: str
     date_posted: date

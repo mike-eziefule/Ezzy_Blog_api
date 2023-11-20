@@ -1,7 +1,9 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from service.Blog_services import reusables_codes
 from schema.models import User, Blogs
+from schema.article_schema import ShowBlog
+from typing import List
 
 
 
@@ -14,13 +16,6 @@ async def get_all_users(db:Session=Depends(reusables_codes.get_db)):
     all_users = db.query(User).all()
     return all_users
 
-# #admin find a user by their id
-# @admin_route.get('/users/{id:int}')
-# def get_a_user(id:int, db:Session=Depends(reusables_codes.get_db)):
-#     user = db.query(User).get(id)
-#     if not user:
-#         return "No such user"
-#     return user
 
 # #admin delete a user by their id address
 @admin_route.delete('/users/delete/{id:int}')
@@ -56,17 +51,16 @@ async def get_all_articles(db:Session=Depends(reusables_codes.get_db)):
     all_blogs = db.query(Blogs).all()
     return all_blogs
 
-#admin view one articles
-# @admin_route.delete("/delete/{id}")
-# async def delete_article(id:int, db:Session = Depends(reusables_codes.get_db)):
-#     existing_article = db.query(Blogs).filter(Blogs.id==id)
-#     if not existing_article.first():
-#         return {'message':f'Article id:{id} not found'}
-#     existing_article.delete() 
-#     db.commit()
-#     return {
-#         'message':'article delete successfully',
-#     }
+#FILTER ARTICLES BY AUTHOR ID
+@admin_route.get("/{user_id}", response_model= List[ShowBlog])
+async def list_blog_from_author(user_id, db:Session = Depends(reusables_codes.get_db)):
+    articles = db.query(Blogs).filter(Blogs.owner_id == user_id)
+    if not articles.first():
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail='No articles from this user')
+    
+    return articles
 
 #admin view aLL articles
 @admin_route.delete('/articles/delete_all')

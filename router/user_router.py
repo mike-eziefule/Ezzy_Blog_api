@@ -61,12 +61,12 @@ async def Edit_User_Info(id:int, input:EditUser, db:Session = Depends(reusables_
 
     raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN, 
-            detail= 'User Information can only be EDITED by Owner'
+            detail= 'Profile can only be EDITED by Owner'
         )
 
 #DELETE MY ACCOUNT Owner ONLY
 @user_route.delete("/delete/{id}")
-async def Delete_My_account(id:int, db:Session=Depends(reusables_codes.get_db), token:str=Depends(oauth2_scheme)):
+async def Delete_My_account(id:int, password:str, db:Session=Depends(reusables_codes.get_db), token:str=Depends(oauth2_scheme)):
     
     #authentication
     user = reusables_codes.get_user_from_token(db, token)
@@ -78,17 +78,14 @@ async def Delete_My_account(id:int, db:Session=Depends(reusables_codes.get_db), 
             detail=f"User with:{id} does not exist"
         )
     
-    if existing_user.first().id == user.id:
-        # db update reqires a dict input but input:BlogCreate is a pydantic model hence the use of jsonable encoder to convert it
-        # existing_article = existing_article.update(jsonable_encoder(input))  
+    if existing_user.first().id == user.id and user.password == password:
         existing_user.delete()                   #Alternatively
         db.commit()
         raise HTTPException(
             status_code=status.HTTP_202_ACCEPTED, 
             detail='Account deleted successfully'
         )
-
     raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN, 
-            detail= 'Owners permission required'
+            detail= 'Account Owner\'s permission required'
         )

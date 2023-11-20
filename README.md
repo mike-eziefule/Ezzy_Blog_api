@@ -71,9 +71,9 @@
 
 Ezzy Blog is a safe space for you to explore the thoughts and experiences of fellow citizens of the internet, and share yours too.
 
-Authentication is not required to read articles on this blog, but you'll have log in to post, edit or delete your articles.
+Authentication is not required to read articles on this blog, however you'll have log in in other to post, edit or delete your articles.
 
-Ezzy Blog was built as an exam project by <a href="https://github.com/mike-eziefule/">Eziefule Michael</a>, a Backend Engineering student at <a href="https://altschoolafrica.com/schools/engineering">AltSchool Africa</a> who's learning to create magic with the Python FastAPI framework.
+Ezzy Blog was built as an exam project by <a href="https://github.com/mike-eziefule/">Eziefule Michael</a>, a Backend Engineering student at <a href="https://engineering.altschoolafrica.com/">AltSchool Africa</a> who's learning to create magic with the Python FastAPI framework.
 
 A tutorial on how this project was built is available in [Michael_Ezzy's Space](https://hashnode.com/draft/6539339dbe20a1000f0b5edd) on Hashnode.
 
@@ -136,6 +136,14 @@ Python3: [Get Python](https://www.python.org/downloads/)
    ```sh
    http://127.0.0.1:8000/docs
    ```
+
+### Alternatively
+1. his Api has been hosted on render.com To test, follow the link below.
+
+   ```sh
+   https://ezzy-blog-api.onrender.com/docs
+   ```
+
 <p align="right"><a href="#readme-top">back to top</a></p>
 
 ---
