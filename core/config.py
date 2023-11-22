@@ -27,6 +27,8 @@ class Settings:
 * perform authentication where a user credentials is verified before they login.
 * perform authorization where a user cannot alter the intellectual property of others.
 * save registration details and blog posts created at all times.
+<a href="https://github.com/mike-eziefule/Ezzy_Blog_api/blob/main/README.md" target="_blank">Read more</a>*
+
 
 ##### Created in October 2023 for Altschool Africa
 
